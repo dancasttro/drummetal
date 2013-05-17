@@ -1,3 +1,5 @@
+var mega;
+
 function addEvent(object, evento, func, capt){
     if(object.attachEvent != null){
         object.attachEvent("on"+evento, func);
@@ -95,22 +97,17 @@ function keyBoardUp(e){
 addEvent(document, "keydown", keyBoardDown, false);
 addEvent(document, "keyup", keyBoardUp, false);
 
-function loadMusicIni(){
-    var mega = new Howl({
-        urls:['sons/musicas/megadeth.mp3'],
-        autoplay: true,
-        volume: 0.1,
-        onload: function(){
-            //alert('teste');
-            obj2 = document.getElementById("main");
-            obj2.style.display = 'block';
+function loadMusicIni(mp3){
+    $("#loader").show();
+    if(mega != null) mega.stop();
+    mega = new Howl({
+        urls:['sons/musicas/'+mp3],
+        onload: function() {
+            $("#loader").hide();
+            alert('Música carregada!')
         }
     }).play();
 }
 function escMusica(){
-    
+    mega.stop();
 }
-
-
-
-loadMusicIni();
