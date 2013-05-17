@@ -1,0 +1,13 @@
+*{margin:0;padding:0;border:0;list-style:none;}
+*{padding:0; margin:0; line-height: none;}
+body{background-color: #000;}
+span{width: 50px; height:50px; background-color: #ccc;padding: 5px;border-radius: 5px;display: block;float: left;margin: 5px;}
+h1{color:#fff;text-align: center;}
+header{width: 100%;height: 100px;}
+#main {width:980px;margin:0 auto;}
+.bateria {width:300px;height: 300px;margin: 0 auto;}
+#loader{position:absolute;width:100%;height:600px;}
+.info{width:100px;float:right;margin-right:2px;margin-top: 2px;}
+.info P{margin:0;padding:3px;background-color:red;font:11px verdana;color:#fff;text-align:center;}
+.jukebox{}
+footer{}
